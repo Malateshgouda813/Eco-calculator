@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Eco Calculator — Carbon Footprint Estimator</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  
+  <main class="container">
+    <header>
+      <h1>Eco Calculator</h1>
+      <p class="lead">Estimate your annual carbon footprint and get easy suggestions to reduce it.</p>
+    </header>
+
+    <form id="eco-form" class="card">
+      <section>
+        <h2>Travel</h2>
+        <div class="row">
+          <label>
+            Car km per week
+            <input id="car_km_week" type="number" min="0" step="1" placeholder="e.g. 150">
+          </label>
+          <label>
+            Fuel type
+            <select id="car_fuel">
+              <option value="petrol">Petrol</option>
+              <option value="diesel">Diesel</option>
+              <option value="ev">Electric (EV)</option>
+            </select>
+          </label>
+        </div>
+
+        <div class="row">
+          <label>
+            Public transport km per week
+            <input id="pt_km_week" type="number" min="0" step="1" placeholder="e.g. 50">
+          </label>
+
+          <label>
+            Flights (short-haul / year)
+            <input id="flights_short" type="number" min="0" step="1" placeholder="e.g. 1">
+          </label>
+
+          <label>
+            Flights (long-haul / year)
+            <input id="flights_long" type="number" min="0" step="1" placeholder="e.g. 0">
+          </label>
+        </div>
+      </section>
+
+      <section>
+        <h2>Home Energy</h2>
+        <div class="row">
+          <label>
+            Electricity kWh per month
+            <input id="elec_kwh_month" type="number" min="0" step="0.1" placeholder="e.g. 300">
+          </label>
+          <label>
+            Heating type
+            <select id="heating_type">
+              <option value="gas">Gas</option>
+              <option value="electric">Electric</option>
+              <option value="heatpump">Heat pump</option>
+            </select>
+          </label>
+        </div>
+      </section>
+
+      <section>
+        <h2>Diet</h2>
+        <div class="row">
+          <label>
+            Diet type
+            <select id="diet_type">
+              <option value="omnivore">Omnivore (meat-heavy)</option>
+              <option value="average">Average</option>
+              <option value="vegetarian">Vegetarian</option>
+              <option value="vegan">Vegan</option>
+            </select>
+          </label>
+
+          <label>
+            Food waste (kg/month)
+            <input id="food_waste" type="number" min="0" step="0.1" placeholder="e.g. 5">
+          </label>
+        </div>
+      </section>
+
+      <div class="actions">
+        <button type="button" id="calculateBtn">Calculate</button>
+        <button type="button" id="resetBtn" class="muted">Reset</button>
+        <button type="button" id="downloadBtn" class="muted">Download Report</button>
+      </div>
+    </form>
+
+    <aside class="card results" id="results" aria-live="polite">
+      <h2>Your Estimate</h2>
+      <div id="summary">
+        <p class="big" id="totalKg">— kg CO₂ / year</p>
+        <p id="context">Enter your details and click Calculate.</p>
+      </div>
+
+      <div id="breakdown">
+        <h3>Breakdown</h3>
+        <ul id="breakdownList"></ul>
+      </div>
+
+      <div id="suggestions">
+        <h3>Suggestions</h3>
+        <ul id="suggestionsList"></ul>
+      </div>
+    </aside>
+
+    <footer>
+      <small>Estimates are indicative. Use them to compare choices and find ways to reduce emissions.</small>
+    </footer>
+  </main>
+
+  <!-- Tiny Chart: use simple canvas -->
+  <canvas id="chart" width="600" height="120" class="hidden"></canvas>
+
+  <script src="app.js"></script>
+
+</body>
+</html>
