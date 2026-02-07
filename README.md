@@ -1,3 +1,8 @@
+#Eco-calculator
+![image alt](https://github.com/Malateshgouda813/Eco-calculator/blob/62373bdd189f5ca791522c25348b52439e41f8bf/Screenshot%20(369).png)
+
+
+
 # React + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
