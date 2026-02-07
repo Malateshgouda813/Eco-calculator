@@ -134,19 +134,4 @@ By combining **calculation, visualization, and reporting**, the project helps us
 
 
 
-#Eco Calculator – Carbon Footprint Estimation System
-
-
-first look 
-
-![image alt](https://github.com/Malateshgouda813/Eco-calculator/blob/62373bdd189f5ca791522c25348b52439e41f8bf/Screenshot%20(369).png)
-
-after giving inputs we can see the output & suggestions on reight side 
-
-![image alt](https://github.com/Malateshgouda813/Eco-calculator/blob/28a83af41bfed1c1c824fdf1a21729ff0dc8a500/Screenshot%20(370).png)
-
-we can download the output report as well, below is the downloaded report 
-
-![image alt](https://github.com/Malateshgouda813/Eco-calculator/blob/58d5ec7e6f488369bbb3a513a2628ce6e3e10065/Screenshot%20(371).png)
-
 
