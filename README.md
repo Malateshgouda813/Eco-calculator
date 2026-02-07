@@ -3,6 +3,11 @@
 The "Eco Calculator" is a web-based application designed to estimate an individual’s "annual carbon footprint" based on everyday lifestyle choices such as travel habits, home energy consumption, and diet.  
 It also provides "actionable suggestions" to help users reduce their environmental impact.
 
+
+# VERCEL deployment
+deployed link:   eco-calculator-weld.vercel.app
+
+
 ---
 
 ## 🚀 Features
